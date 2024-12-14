@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 18</title>
+    <link rel="shortcut icon" href="imgs/icon.png" type="image/x-icon">
+    <style>
+        * {
+            font-size: large;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            line-height: 3vh;
+        }
+
+        h1,
+        h2 {
+            font-size: 3vh;
+        }
+
+        body {
+            background-image: url(imgs/bg.jpg);
+            background-size: cover;
+            color: white;
+            margin-left: 1vh;
+        }
+
+        button {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 5px;
+            background: #183153;
+            font-family: "Montserrat", sans-serif;
+            box-shadow: 0px 6px 24px 0px rgba(0, 0, 0, 0.2);
+            overflow: hidden;
+            cursor: pointer;
+            border: none; 
+            margin-top: 2vh;
+        }
+
+        button:after {
+            content: " ";
+            width: 0%;
+            height: 100%;
+            background: #ffd401;
+            position: absolute;
+            transition: all 0.4s ease-in-out;
+            right: 0;
+        }
+
+        button:hover::after {
+            right: auto;
+            left: 0;
+            width: 100%;
+        }
+
+        button span {
+            text-align: center;
+            text-decoration: none;
+            width: 100%;
+            padding: 15px 10px;
+            color: #fff;
+            font-size: 1.125em;
+            font-weight: 700;
+            z-index: 20;
+            transition: all 0.3s ease-in-out;
+        }
+
+        button:hover span {
+            color: #183153;
+            animation: scaleUp 0.3s ease-in-out;
+        }
+
+        @keyframes scaleUp {
+            0% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(0.95);
+            }
+
+            100% {
+                transform: scale(1);
+            }
+        }
+        .buttons {
+            display: flex;
+            gap: 2vh;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Task 18: Attendance Tracker</h1>
+    <p><b>Task Explanation:</b>:  Aap ek school ke liye attendance tracker banayenge. Isme har student ka attendance
+        record hoga jaise Present,Absent, ya Late.</p>
+    <h2>Instructions:</h2>
+    <ol>
+        <li>Har student ke attendance ko count karna hai. Jaise kitne students Present the, kitne
+            Absent the, etc.</li>
+        <li>Loop ka use karke hum students ke attendance status ko check karenge.</li>
+        <li>If conditions ka use karke har student ka status dekh kar count karenge (Present, Absent, Late).</li>
+        <li>Function banayenge jo attendance ki summary print kare.</li>
+    </ol>
+    <h1>Made By Abdullah Razzaq</h1>
+    <div class="buttons">
+    <button class="button" onclick="count1()"><span>Present</span></button>
+    <button class="button" onclick="count2()"><span>Absent</span></button>
+    <button class="button" onclick="count3()"><span>Late</span></button>
+    <button class="button" onclick="result()"><span>Show Summary</span></button>
+</div>
+    <script src="app.js"></script>
+</body>
+</html>
