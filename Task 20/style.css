@@ -1,0 +1,244 @@
+/* * {
+    font-size: large;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    line-height: 3vh;
+}
+
+h1,
+h2 {
+    font-size: 3vh;
+}
+
+body {
+    background-image: url(imgs/bg.jpg);
+    background-size: cover;
+    color: white;
+    margin-left: 1vh;
+}
+
+.button {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    background: #183153;
+    font-family: "Montserrat", sans-serif;
+    box-shadow: 0px 6px 24px 0px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    cursor: pointer;
+    border: none; 
+    margin-top: 2vh;
+}
+
+.button:after {
+    content: " ";
+    width: 0%;
+    height: 100%;
+    background: #ffd401;
+    position: absolute;
+    transition: all 0.4s ease-in-out;
+    right: 0;
+}
+
+.button:hover::after {
+    right: auto;
+    left: 0;
+    width: 100%;
+}
+
+.button span {
+    text-align: center;
+    text-decoration: none;
+    width: 100%;
+    padding: 15px 10px;
+    color: #fff;
+    font-size: 1.125em;
+    font-weight: 700;
+    z-index: 20;
+    transition: all 0.3s ease-in-out;
+}
+
+.button:hover span {
+    color: #183153;
+    animation: scaleUp 0.3s ease-in-out;
+}
+
+@keyframes scaleUp {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(0.95);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+.buttons {
+    display: flex;
+    gap: 2vh;
+}
+.box {
+    height: 100px;
+    width: 100px;
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    font-weight: bold;
+    cursor: pointer;
+    color: #183153;
+}
+.boxes {
+    display: flex;
+    gap: 2vh;
+
+} */
+
+/* General Styles */
+body {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background-image: url(imgs/bg.jpg);
+    background-size: cover;
+    color: white;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    box-sizing: border-box;
+}
+
+h1 {
+    font-size: 3vh;
+    margin: 10px 0;
+    text-align: center;
+}
+
+.description {
+    font-size: 2.5vh;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.boxes {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.box {
+    height: 80px;
+    width: 80px;
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    font-weight: bold;
+    color: #183153;
+}
+
+.buttons {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    margin-bottom: 15px;
+}
+
+.button {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    background: #183153;
+    font-family: "Montserrat", sans-serif;
+    box-shadow: 0px 6px 24px 0px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    cursor: pointer;
+    border: none;
+    padding: 10px 20px;
+    color: white;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.button:hover {
+    background-color: #ffd401;
+    color: #183153;
+}
+
+#result {
+    font-size: 2vh;
+    margin-top: 10px;
+    text-align: center;
+}
+
+/* Media Queries for Responsiveness */
+@media screen and (max-width: 768px) {
+    h1 {
+        font-size: 2.5vh;
+    }
+
+    .description {
+        font-size: 2vh;
+    }
+
+    .boxes {
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    .box {
+        height: 70px;
+        width: 70px;
+        font-size: 20px;
+    }
+
+    .button {
+        font-size: 14px;
+        padding: 8px 16px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    h1 {
+        font-size: 2vh;
+    }
+
+    .description {
+        font-size: 1.8vh;
+    }
+
+    .boxes {
+        gap: 5px;
+    }
+
+    .box {
+        height: 60px;
+        width: 60px;
+        font-size: 18px;
+    }
+
+    .button {
+        font-size: 12px;
+        padding: 6px 12px;
+    }
+
+    #result {
+        font-size: 1.8vh;
+    }
+}

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 20</title>
+    <link rel="shortcut icon" href="imgs/icon.png" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <style>
+    </style>
+</head>
+
+<body>
+
+    <h1>Task 20: Number Matching Game</h1>
+    <p class="description"><b>Task Explanation:</b>: Test your luck in this fun game! Click the "Generate" button to roll three numbers. 
+        If all three numbers match, you win! You have 5 tries. Good luck!</p>
+    <h2>Instructions:</h2>
+    <ol>
+        <li>If all numbers are the same, the user wins, and the button is disabled.</li>
+        <li>If numbers are not the same, the tries decrease by 1.</li>
+        <li>After 5 failed attempts, the user loses, and the button is disabled.</li>
+    </ol>
+    <div class="boxes">
+        <div id="box1" class="box">0</div>
+        <div id="box2" class="box">0</div>
+        <div id="box3" class="box">0</div>
+    </div>
+    <div class="buttons">
+    <button id="generateBtn" class="button" onclick="game()"><span>Generate</span></button>
+    <button id="resetbtn" class="button" onclick="reset()"><span>Reset Game</span></button>
+</div>
+<p id="result">You have 5 tries left.</p>
+<h1>Made By Abdullah Razzaq</h1>
+
+
+    <script src="app.js"></script>
+</body>
+</html>
